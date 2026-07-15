@@ -9,17 +9,6 @@ This repository is the production build of a two-milestone research project. **O
 assumed already complete and are represented solely by the cleaned input file,
 `data/processed_corpus_5000.csv`.
 
-![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
-![Python](https://img.shields.io/badge/python-3.11-blue)
-![FastAPI](https://img.shields.io/badge/backend-FastAPI-009688)
-![Streamlit](https://img.shields.io/badge/frontend-Streamlit-FF4B4B)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
-
-## Screenshots
-
-> _Add screenshots here after your first local run:_
-> `docs/screenshots/welcome.png`, `docs/screenshots/chat.png`, `docs/screenshots/dashboard.png`
-
 ## Features
 
 - **RAG pipeline**: Chroma vector store + `sentence-transformers/all-MiniLM-L6-v2` embeddings +
@@ -120,7 +109,3 @@ same metrics — reorganized into typed, documented, testable modules. See
 2. Keep RAG/evaluation/optimization logic behavior-identical unless explicitly asked to change it.
 3. Add/update tests for any new backend code.
 4. Open a PR describing the change and why.
-
-## License
-
-MIT — see [`LICENSE`](LICENSE).
