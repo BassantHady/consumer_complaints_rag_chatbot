@@ -45,6 +45,17 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: python-app
+      - name: Copy data and models into backend
+        run: |
+          cp -r data backend/data
+          cp -r models backend/models
+      - name: Upload artifact for deployment jobs
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-app
+          path: |
+            backend
+            !backend/antenv
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -57,3 +68,4 @@ jobs:
         with:
           app-name: 'Customer-Complaints-rag-chatbot'
           slot-name: 'Production'
+          package: backend
